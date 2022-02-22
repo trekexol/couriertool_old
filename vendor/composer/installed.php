@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a7349c33d0b65e2f1ebfe2b935962f5f272c0fac',
+        'reference' => 'a3a119186b427a93c91afd4a0001c0ecd0999650',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'barryvdh/laravel-dompdf' => array(
+            'pretty_version' => 'v1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../barryvdh/laravel-dompdf',
+            'aliases' => array(),
+            'reference' => 'e3f429e97087b2ef19b83e5ed313f080f2477685',
+            'dev_requirement' => false,
+        ),
         'cordoval/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -47,6 +56,15 @@
             'install_path' => __DIR__ . '/../doctrine/lexer',
             'aliases' => array(),
             'reference' => 'e864bbf5904cb8f5bb334f99209b48018522f042',
+            'dev_requirement' => false,
+        ),
+        'dompdf/dompdf' => array(
+            'pretty_version' => 'v1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dompdf/dompdf',
+            'aliases' => array(),
+            'reference' => '60b704331479a69e9bcdb3496da2315b5c4f94fd',
             'dev_requirement' => false,
         ),
         'dragonmantank/cron-expression' => array(
@@ -331,7 +349,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a7349c33d0b65e2f1ebfe2b935962f5f272c0fac',
+            'reference' => 'a3a119186b427a93c91afd4a0001c0ecd0999650',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -471,6 +489,24 @@
             'aliases' => array(),
             'reference' => 'bae7c545bef187884426f042434e561ab1ddb182',
             'dev_requirement' => true,
+        ),
+        'phenx/php-font-lib' => array(
+            'pretty_version' => '0.5.4',
+            'version' => '0.5.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-font-lib',
+            'aliases' => array(),
+            'reference' => 'dd448ad1ce34c63d09baccd05415e361300c35b4',
+            'dev_requirement' => false,
+        ),
+        'phenx/php-svg-lib' => array(
+            'pretty_version' => '0.4.0',
+            'version' => '0.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-svg-lib',
+            'aliases' => array(),
+            'reference' => '3ffbbb037f0871c3a819e90cff8b36dd7e656189',
+            'dev_requirement' => false,
         ),
         'php-parallel-lint/php-console-color' => array(
             'pretty_version' => 'v0.3',
@@ -616,8 +652,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -652,6 +688,15 @@
             'replaced' => array(
                 0 => '3.9.6',
             ),
+        ),
+        'sabberworm/php-css-parser' => array(
+            'pretty_version' => '8.4.0',
+            'version' => '8.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sabberworm/php-css-parser',
+            'aliases' => array(),
+            'reference' => 'e41d2140031d533348b2192a83f02d8dd8a71d30',
+            'dev_requirement' => false,
         ),
         'scrivo/highlight.php' => array(
             'pretty_version' => 'v9.18.1.8',
