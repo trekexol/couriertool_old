@@ -16,8 +16,7 @@ class CreateAgenciesTable extends Migration
         Schema::create('agencies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_city');
-            $table->unsignedBigInteger('id_agent')->nullable();
-
+          
             $table->string('code',30);
             $table->string('name',50);
             $table->string('type',15)->default('no_comercial');

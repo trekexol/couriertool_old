@@ -25,6 +25,7 @@
         <li><a><i class="fa fa-user"></i> Administración<span class="fa fa-chevron-down"></span></a>
           <ul class="nav child_menu">
             <li><a href="{{ route('agencies.index') }}">Agencias</a></li>
+            <li><a href="{{ route('airlines.index') }}">Aerolineas</a></li>
           </ul>
         </li>
       </ul>

@@ -147,6 +147,9 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
+
+    
+    <script src="{{asset('vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js') }}"></script>
 	
      <!-- Datatables -->
      <script src="{{asset('vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script>
