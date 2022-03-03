@@ -38,5 +38,22 @@ Route::group(["prefix"=>'packages'],function(){
 Route::group(["prefix"=>'agencies'],function(){
     Route::get('/', 'Agency\AgencyController@index')->name('agencies.index');
     Route::get('create', 'Agency\AgencyController@create')->name('agencies.create');
+    Route::post('store', 'Agency\AgencyController@store')->name('agencies.store');
+    Route::get('edit/{id}', 'Agency\AgencyController@edit')->name('agencies.edit');
+    Route::delete('delete', 'Agency\AgencyController@delete')->name('agencies.delete');
+});
+
+Route::group(["prefix"=>'airlines'],function(){
+    Route::get('/', 'Airline\AirlineController@index')->name('airlines.index');
+    Route::get('create', 'Airline\AirlineController@create')->name('airlines.create');
+    Route::post('store', 'Airline\AirlineController@store')->name('airlines.store');
+    Route::get('edit/{id}', 'Airline\AirlineController@edit')->name('airlines.edit');
+    Route::put('update', 'Airline\AirlineController@update')->name('airlines.update');
+    Route::delete('delete', 'Airline\AirlineController@delete')->name('airlines.delete');
+});
+
+
+Route::group(["prefix"=>'whatsapps'],function(){
+    Route::get('/', 'whatsapp\whatsappController@index')->name('whatsapps.index');
 
 });

@@ -11,8 +11,9 @@
 
     <div class="x_content">
         <br />
-        <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+        <form method="POST" action="{{ route('agencies.store') }}" id="form" data-parsley-validate class="form-horizontal form-label-left">
+        @csrf
+                
             <div class="item form-group">
                 <label class="col-form-label col-md-1 col-sm-1 label-align" for="code">Código:</label>
                 <div class="col-md-4 col-sm-4 ">
@@ -21,10 +22,10 @@
 
                 <label class="col-form-label col-md-2 col-sm-2 label-align">Agencia Comercial:</label>
                 <div class="col-md-1 col-sm-1 ">
-                <p> Si:<input type="radio" class="flat" name="comercial" id="comercialYes" value="Yes"  required /> 
+                <p> Si: <input type="radio" class="flat" name="comercial" id="comercialYes" value="Yes"  required /> 
                 </div>
                 <div class="col-md-1 col-sm-1 ">
-                    No:<input type="radio" class="flat" name="comercial" id="comercialNo" value="No" checked=""/>
+                    No: <input type="radio" class="flat" name="comercial" id="comercialNo" value="No" checked=""/>
                 </p>
                 </div>
             </div>
@@ -35,7 +36,7 @@
                 </div>
                 <label class="col-form-label col-md-2 col-sm-2 label-align" for="phone">Teléfono:</label>
                 <div class="col-md-4 col-sm-4 ">
-                    <input type="text" id="phone" name="phone" required="required" class="form-control ">
+                    <input type="text" id="phone" name="phone"  data-inputmask="'mask' : '(9999) 999-9999'" autocomplete="phone" required="required" class="form-control">
                 </div>
             </div>
             <div class="item form-group">
@@ -58,21 +59,25 @@
             <div class="item form-group">
                 <label class="col-form-label col-md-1 col-sm-1 label-align" for="direction">Dirección:</label>
                 <div class="col-md-4 col-sm-4 ">
-                    <input type="text" id="direction" required="required" class="form-control ">
+                    <input type="text" id="direction" name="direction" required="required" class="form-control ">
                 </div>
                 <label class="col-form-label col-md-2 col-sm-2 label-align" for="contact_person">Persona Contacto:</label>
                 <div class="col-md-4 col-sm-4 ">
-                    <input type="text" id="contact_person" required="required" class="form-control ">
+                    <input type="text" id="contact_person" name="contact_person" required="required" class="form-control ">
                 </div>
             </div>
             <div class="item form-group">
-                <label class="col-form-label col-md-1 col-sm-1 label-align" for="direction">Dirección:</label>
+                <label class="col-form-label col-md-1 col-sm-1 label-align" for="amount">Tarifa:</label>
                 <div class="col-md-4 col-sm-4 ">
-                    <input type="text" id="direction" required="required" class="form-control ">
+                    <input type="text" id="amount" name="amount" required="required" class="form-control ">
                 </div>
-                <label class="col-form-label col-md-2 col-sm-2 label-align" for="contact_person">Persona Contacto:</label>
-                <div class="col-md-4 col-sm-4 ">
-                    <input type="text" id="contact_person" required="required" class="form-control ">
+                <label class="col-form-label col-md-2 col-sm-2 label-align">Pago Virtual:</label>
+                <div class="col-md-1 col-sm-1 ">
+                <p> Si: <input type="radio" class="flat" name="payment_virtual" id="payment_virtualYes" value="Yes"  required /> 
+                </div>
+                <div class="col-md-1 col-sm-1 ">
+                    No: <input type="radio" class="flat" name="payment_virtual" id="payment_virtualNo" value="No" checked=""/>
+                </p>
                 </div>
             </div>
 
@@ -94,6 +99,9 @@
 
 @section('country')
     <script>
+      
+    
+
         function getCities(country_id){
             
             $.ajax({
