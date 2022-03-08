@@ -24,8 +24,12 @@
                
         <li><a><i class="fa fa-user"></i> Administración<span class="fa fa-chevron-down"></span></a>
           <ul class="nav child_menu">
-            <li><a href="{{ route('agencies.index') }}">Agencias</a></li>
             <li><a href="{{ route('airlines.index') }}">Aerolineas</a></li>
+            <li><a href="{{ route('wharehouses.index') }}">Almacenes</a></li>
+            <li><a href="{{ route('agencies.index') }}">Agencias</a></li>
+            <li><a href="{{ route('cities.index') }}">Ciudades</a></li>
+            <li><a href="{{ route('countries.index') }}">Paises</a></li>
+            <li><a href="{{ route('national_rates.index') }}">Tarifas Nacionales</a></li>
           </ul>
         </li>
       </ul>
