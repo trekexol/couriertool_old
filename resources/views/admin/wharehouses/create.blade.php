@@ -29,8 +29,8 @@
             <div class="item form-group">
                 <label class="col-form-label col-md-3 col-sm-3 label-align">Agencia:</label>
                 <div class="col-md-4 col-sm-4">
-                    <select id="agency" name="id_agency" class="select2_single form-control">
-                        <option>Seleccione una Agencia</option>
+                    <select id="agency" name="id_agency" required class="select2_single form-control">
+                        <option value="">Seleccione una Agencia</option>
                         @isset($agencies)
                             @foreach ($agencies as $agency)
                                 <option value="{{ $agency->id }}">{{ $agency->name }}</option>
